@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://unpkg.com/jquery.terminal/js/jquery.terminal.min.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/jquery.terminal/css/jquery.terminal.min.css"/>
+</head>
+<body>
+<script>
+    //COMMANDS
+    $('body').terminal({ 
+
+        hello: function(what) {//Hello
+            this.echo('Hello,' + what + '. Welcome to this terminal.');
+        },
+
+        about: function() {//About
+            this.echo('My name is Tayo!');
+        },
+
+        linkedin: function() {//LinkedIn
+            this.echo('https://linkedin.com/in/tayo-ojo');
+        },
+        
+        github: function() {//Github
+            this.echo('https://github.com/tayoojo')
+        },
+
+        help: function() {//Help
+            this.echo('\nHere is a list of available commands: ')
+            this.echo('\nhelp: \n-Shows list of available commands... you know this!')
+            this.echo('\nabout: \n-Shows cool information about me.')
+            this.echo("\nlinkedin: \n-Sends you to my LinkedIn profile. Let's connect!");
+            this.echo('\nclear: \n-Clears the terminal.')
+            this.echo('\ngithub: \n-Sends you to my Github.')
+        }
+
+    }, {
+        greetings: 'For a list of commands, type "help."'
+    });
+</script>
+
+
+</body>
+
+</html>
