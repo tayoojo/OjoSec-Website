@@ -1,0 +1,21 @@
+.terminal-container {
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    cursor: text;
+    background-color: black;
+}
+
+.terminal-content {
+    padding: 20px;
+    font-size: 15px;
+    line-height: 20px;
+    white-space: pre-wrap;
+    color: #aaa;
+    display: flex;
+    flex-direction: column;
+}
+
+.banner {
+    background-color: black;
+}

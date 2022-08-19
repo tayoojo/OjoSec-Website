@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html>
+<title>
+    Tayo Ojo | OjoSec
+</title>
 <head>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script src="https://unpkg.com/jquery.terminal/js/jquery.terminal.min.js"></script>
 <link rel="stylesheet" href="https://unpkg.com/jquery.terminal/css/jquery.terminal.min.css"/>
+<link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
 <body>
 <script>
@@ -15,29 +19,71 @@
         },
 
         about: function() {//About
-            this.echo('My name is Tayo!');
+
+            this.echo("\nINTRO")
+            this.echo('\nThanks for checking out my website! My name is Tayo Ojo, ' +
+            " I'm from Maryland, and I am 21 years old." +
+            "\nI love to learn, especially about cyber security and technology in general.")
+//##############################################################################
+            this.echo("\nEXPERIENCE")
+
+            this.echo("\nI'm pretty new to the professional world, but I spent time working as "+
+            "a PC Support Technician for Collins Aerospace, a Cyber Security Engineer Intern at Textron Systems," +
+            "and I'll be returning to Textron Systems as a Cyber Security Engineer starting January 2023!")
+//##############################################################################
+            this.echo("\nEDUCATION")
+
+            this.echo('\nAs of writing this, I am entering my final semester at the ' +
+            "University of Maryland where I am studying Information Science with a" +
+            " specialization in cyber security and privacy.")
+
+            this.echo('\nDuring my time at the university, I have been consistently' +
+            " attaining Dean's List Honors, participated in Intramural Football and Club Boxing," +
+            " and I received the 2022 OMSE Academic Excellence Award!")
+//##############################################################################
+            this.echo("\nCERTIFICATIONS")
+            this.echo("\nCompTIA Security+" +
+            "\nhttps://www.credly.com/badges/ae50ee99-7918-492d-86b5-5332c86adf6a/public_url")
+
+//##############################################################################
+            this.echo("\nHOBBIES")
+            this.echo('\n')
+//##############################################################################
         },
 
         linkedin: function() {//LinkedIn
             this.echo('https://linkedin.com/in/tayo-ojo');
+            window.open("https://linkedin.com/in/tayo-ojo", "_blank");
         },
         
         github: function() {//Github
             this.echo('https://github.com/tayoojo')
+            window.open("https://github.com/tayoojo", "_blank")
         },
 
         help: function() {//Help
             this.echo('\nHere is a list of available commands: ')
             this.echo('\nhelp: \n-Shows list of available commands... you know this!')
             this.echo('\nabout: \n-Shows cool information about me.')
-            this.echo("\nlinkedin: \n-Sends you to my LinkedIn profile. Let's connect!");
-            this.echo('\nclear: \n-Clears the terminal.')
+            this.echo("\nlinkedin: \n-Sends you to my LinkedIn profile. Let's connect!")
             this.echo('\ngithub: \n-Sends you to my Github.')
+            this.echo('\nclear: \n-Clears the terminal.')
+            this.echo('\nrestart: \n-Restarts the terminal so you can admire the beautiful name art!')
+        },
+
+        restart: function() {
+            this.echo("╔╦╗╔═╗╦ ╦╔═╗  ╔═╗ ╦╔═╗" +
+ "\n ║ ╠═╣╚╦╝║ ║  ║ ║ ║║ ║" +
+ "\n ╩ ╩ ╩ ╩ ╚═╝  ╚═╝╚╝╚═╝" + "\nWelcome to my website!" + '\nFor a list of commands, type "help."')
         }
 
     }, {
-        greetings: 'For a list of commands, type "help."'
+        greetings: "╔╦╗╔═╗╦ ╦╔═╗  ╔═╗ ╦╔═╗" +
+ "\n ║ ╠═╣╚╦╝║ ║  ║ ║ ║║ ║" +
+ "\n ╩ ╩ ╩ ╩ ╚═╝  ╚═╝╚╝╚═╝" + "\nWelcome to my website!" + '\nFor a list of commands, type "help."'
     });
+
+
 </script>
 
 
