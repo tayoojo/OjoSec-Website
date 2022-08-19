@@ -10,12 +10,35 @@
 <link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
 <body>
+<style>
+    :root {
+        --size: 2;
+    }
+
+    .terminal {
+        --color: rgba(255, 255, 255, 0.99);
+        --animation: terminal-glow;
+        --glow: 1;
+    }
+
+</style>
+
+<template id="greetings">
+    _____  ____ __  __ ____     ____   __  ____ 
+    |_   _|/ () \\ \/ // () \   / () \__) |/ () \
+      |_| /__/\__\|__| \____/   \____/\___/\____/
+
+    <script>
+        this.echo("Welcome to my website!\n \nFor a list of commands, type 'help.'", { typing: true, delay: 35});
+    </script>
+</template>
+
 <script>
     //COMMANDS
     $('body').terminal({ 
 
         hello: function(what) {//Hello
-            this.echo('Hello,' + what + '. Welcome to this terminal.');
+            this.echo('Hello, ' + what + '. Welcome to this terminal.');
         },
 
         about: function() {//About
@@ -63,24 +86,21 @@
 
         help: function() {//Help
             this.echo('\nHere is a list of available commands: ')
-            this.echo('\nhelp: \n-Shows list of available commands... you know this!')
-            this.echo('\nabout: \n-Shows cool information about me.')
-            this.echo("\nlinkedin: \n-Sends you to my LinkedIn profile. Let's connect!")
-            this.echo('\ngithub: \n-Sends you to my Github.')
-            this.echo('\nclear: \n-Clears the terminal.')
-            this.echo('\nrestart: \n-Restarts the terminal so you can admire the beautiful name art!')
+            this.echo('\n[[;green;]help: \n[[;white;]-Shows list of available commands... you know this!')
+            this.echo('\nabout: \n[[;white;]-Shows cool information about me.')
+            this.echo("\nlinkedin: \n[[;white;]-Sends you to my LinkedIn profile. Let's connect!")
+            this.echo('\ngithub: \n[[;white;]-Sends you to my Github.')
+            this.echo('\nclear: \n[[;white;]-Clears the terminal.')
+            this.echo('\nrestart: \n[[;white;]-Restarts the terminal so you can admire the beautiful name art!')
         },
 
         restart: function() {
-            this.echo("╔╦╗╔═╗╦ ╦╔═╗  ╔═╗ ╦╔═╗" +
- "\n ║ ╠═╣╚╦╝║ ║  ║ ║ ║║ ║" +
- "\n ╩ ╩ ╩ ╩ ╚═╝  ╚═╝╚╝╚═╝" + "\nWelcome to my website!" + '\nFor a list of commands, type "help."')
+            this.echo(greetings.innerHTML)
+            this.echo("Welcome to my website!\n \nFor a list of commands, type 'help.'", { typing: true, delay: 35})
         }
 
     }, {
-        greetings: "╔╦╗╔═╗╦ ╦╔═╗  ╔═╗ ╦╔═╗" +
- "\n ║ ╠═╣╚╦╝║ ║  ║ ║ ║║ ║" +
- "\n ╩ ╩ ╩ ╩ ╚═╝  ╚═╝╚╝╚═╝" + "\nWelcome to my website!" + '\nFor a list of commands, type "help."'
+        greetings: greetings.innerHTML
     });
 
 
