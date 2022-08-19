@@ -24,18 +24,31 @@
 </style>
 
 <template id="greetings">
-    _____  ____ __  __ ____     ____   __  ____ 
+    [[;#fc9803;]
+     _____  ____ __  __ ____     ____   __  ____ 
     |_   _|/ () \\ \/ // () \   / () \__) |/ () \
       |_| /__/\__\|__| \____/   \____/\___/\____/
+    [[;white;]
+Welcome to my website!
 
-    <script>
-        this.echo("Welcome to my website!\n \nFor a list of commands, type 'help.'", { typing: true, delay: 35});
-    </script>
+For a list of commands, type 'help.'
 </template>
+
+<template id="restart">
+    [[;#fc9803;]
+     _____  ____ __  __ ____     ____   __  ____ 
+    |_   _|/ () \\ \/ // () \   / () \__) |/ () \
+      |_| /__/\__\|__| \____/   \____/\___/\____/
+    [[;white;]
+</template>
+
 
 <script>
     //COMMANDS
+    
     $('body').terminal({ 
+
+
 
         hello: function(what) {//Hello
             this.echo('Hello, ' + what + '. Welcome to this terminal.');
@@ -43,18 +56,18 @@
 
         about: function() {//About
 
-            this.echo("\nINTRO")
+            this.echo("\n[[;#fc9803;]INTRO[[;white;]")
             this.echo('\nThanks for checking out my website! My name is Tayo Ojo, ' +
             " I'm from Maryland, and I am 21 years old." +
             "\nI love to learn, especially about cyber security and technology in general.")
 //##############################################################################
-            this.echo("\nEXPERIENCE")
+            this.echo("\n[[;#fc9803;]EXPERIENCE[[;white;]")
 
             this.echo("\nI'm pretty new to the professional world, but I spent time working as "+
             "a PC Support Technician for Collins Aerospace, a Cyber Security Engineer Intern at Textron Systems," +
             "and I'll be returning to Textron Systems as a Cyber Security Engineer starting January 2023!")
 //##############################################################################
-            this.echo("\nEDUCATION")
+            this.echo("\n[[;#fc9803;]EDUCATION[[;white;]")
 
             this.echo('\nAs of writing this, I am entering my final semester at the ' +
             "University of Maryland where I am studying Information Science with a" +
@@ -64,13 +77,13 @@
             " attaining Dean's List Honors, participated in Intramural Football and Club Boxing," +
             " and I received the 2022 OMSE Academic Excellence Award!")
 //##############################################################################
-            this.echo("\nCERTIFICATIONS")
+            this.echo("\n[[;#fc9803;]CERTIFICATIONS[[;white;]")
             this.echo("\nCompTIA Security+" +
             "\nhttps://www.credly.com/badges/ae50ee99-7918-492d-86b5-5332c86adf6a/public_url")
 
 //##############################################################################
-            this.echo("\nHOBBIES")
-            this.echo('\n')
+            this.echo("\n[[;#fc9803;]HOBBIES[[;white;]")
+            this.echo('\nWIP')
 //##############################################################################
         },
 
@@ -85,22 +98,22 @@
         },
 
         help: function() {//Help
-            this.echo('\nHere is a list of available commands: ')
-            this.echo('\n[[;green;]help: \n[[;white;]-Shows list of available commands... you know this!')
-            this.echo('\nabout: \n[[;white;]-Shows cool information about me.')
-            this.echo("\nlinkedin: \n[[;white;]-Sends you to my LinkedIn profile. Let's connect!")
-            this.echo('\ngithub: \n[[;white;]-Sends you to my Github.')
-            this.echo('\nclear: \n[[;white;]-Clears the terminal.')
-            this.echo('\nrestart: \n[[;white;]-Restarts the terminal so you can admire the beautiful name art!')
+            this.echo('\n[[;#fc9803;]Here is a list of available commands: ',)
+            this.echo('\n[[;#fc9803;]help: \n[[;white;]-Shows list of available commands... you know this!')
+            this.echo('\n[[;#fc9803;]about: \n[[;white;]-Shows cool information about me.')
+            this.echo("\n[[;#fc9803;]linkedin: \n[[;white;]-Sends you to my LinkedIn profile. Let's connect!")
+            this.echo('\n[[;#fc9803;]github: \n[[;white;]-Sends you to my Github.')
+            this.echo('\n[[;#fc9803;]clear: \n[[;white;]-Clears the terminal.')
+            this.echo('\n[[;#fc9803;]restart: \n[[;white;]-Restarts the terminal so you can admire the beautiful name art!')
         },
 
         restart: function() {
-            this.echo(greetings.innerHTML)
+            this.echo(restart.innerHTML)
             this.echo("Welcome to my website!\n \nFor a list of commands, type 'help.'", { typing: true, delay: 35})
         }
 
     }, {
-        greetings: greetings.innerHTML
+        greetings: greetings.innerHTML 
     });
 
 
