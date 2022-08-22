@@ -12,7 +12,7 @@
 <body>
 <style>
     :root {
-        --size: 2;
+        --size: 1.75;
     }
 
     .terminal {
@@ -28,6 +28,7 @@
      _____  ____ __  __ ____     ____   __  ____ 
     |_   _|/ () \\ \/ // () \   / () \__) |/ () \
       |_| /__/\__\|__| \____/   \____/\___/\____/
+
     [[;white;]
 Welcome to my website!
 
@@ -39,6 +40,7 @@ For a list of commands, type 'help.'
      _____  ____ __  __ ____     ____   __  ____ 
     |_   _|/ () \\ \/ // () \   / () \__) |/ () \
       |_| /__/\__\|__| \____/   \____/\___/\____/
+
     [[;white;]
 </template>
 
@@ -50,16 +52,14 @@ For a list of commands, type 'help.'
 
 
 
-        hello: function(what) {//Hello
-            this.echo('Hello, ' + what + '. Welcome to this terminal.');
+        secret: function() {//Hello
+            this.echo("You found the secret command! I don't know if I trust you...");
         },
 
         about: function() {//About
-
+            this.echo("\n[[;#4AF626;]═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════[[;white;]")
             this.echo("\n[[;#fc9803;]INTRO[[;white;]")
-            this.echo('\nThanks for checking out my website! My name is Tayo Ojo, ' +
-            " I'm from Maryland, and I am 21 years old." +
-            "\nI love to learn, especially about cyber security and technology in general.")
+            this.echo("\nThanks for checking out my website! My name is Tayo Ojo, I'm from Maryland, and I am 21 years old." + "\nI love to learn, especially about cyber security and technology in general.")
 //##############################################################################
             this.echo("\n[[;#fc9803;]EXPERIENCE[[;white;]")
 
@@ -83,28 +83,31 @@ For a list of commands, type 'help.'
 
 //##############################################################################
             this.echo("\n[[;#fc9803;]HOBBIES[[;white;]")
-            this.echo('\nWIP')
+            this.echo('\nWIP\n')
 //##############################################################################
         },
 
         linkedin: function() {//LinkedIn
-            this.echo('https://linkedin.com/in/tayo-ojo');
+            this.echo("\n[[;#4AF626;]═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════[[;white;]")
+            this.echo('https://linkedin.com/in/tayo-ojo\n');
             window.open("https://linkedin.com/in/tayo-ojo", "_blank");
         },
         
         github: function() {//Github
-            this.echo('https://github.com/tayoojo')
+            this.echo("\n[[;#4AF626;]═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════[[;white;]")
+            this.echo('https://github.com/tayoojo\n')
             window.open("https://github.com/tayoojo", "_blank")
         },
 
         help: function() {//Help
+            this.echo("\n[[;#4AF626;]═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════[[;white;]")
             this.echo('\n[[;#fc9803;]Here is a list of available commands: ',)
             this.echo('\n[[;#fc9803;]help: \n[[;white;]-Shows list of available commands... you know this!')
             this.echo('\n[[;#fc9803;]about: \n[[;white;]-Shows cool information about me.')
             this.echo("\n[[;#fc9803;]linkedin: \n[[;white;]-Sends you to my LinkedIn profile. Let's connect!")
             this.echo('\n[[;#fc9803;]github: \n[[;white;]-Sends you to my Github.')
             this.echo('\n[[;#fc9803;]clear: \n[[;white;]-Clears the terminal.')
-            this.echo('\n[[;#fc9803;]restart: \n[[;white;]-Restarts the terminal so you can admire the beautiful name art!')
+            this.echo('\n[[;#fc9803;]restart: \n[[;white;]-Restarts the terminal so you can admire the beautiful name art!\n')
         },
 
         restart: function() {
@@ -113,7 +116,7 @@ For a list of commands, type 'help.'
         }
 
     }, {
-        greetings: greetings.innerHTML 
+        greetings: greetings.innerHTML
     });
 
 
